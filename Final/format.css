@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+html {
+    background-color: gray;
+}
+
+body {
+    display: flex;
+    background-color: lightcoral;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+div {
+    position: relative; 
+    display: inline-block; 
+    width: 100%;
+}
+
+p#info, img#map, nav#gymLeaders {
+    flex: 1 1 250px;
+    padding: 5px;
+}
+
+img#map {
+    width: 100%;
+}
+
+nav#gymLeaders {
+    text-align: center;
+}
+
+p#hGym {
+    display: none;
+}
+
+img.pins {
+    position: absolute;
+    transform: translate(-50%, -50%) scale(.10);
+    width: 30%; 
+    height: auto;
+    transition: ease-in 0.5s;            
+}
+img.pins:hover {
+    transform: translate(-50%, -52.3%) scale(0.15);
+}
+
+#mix {
+    top: 57%; 
+    left: 89%;
+}
+#normal {
+    top: 63%; 
+    left: 77%;
+}
+#bug {
+    top: 75%; 
+    left: 52%;
+}
+#elecrtic {
+    top: 50%; 
+    left: 49.5%;
+}
+#ground {
+    top: 46%; 
+    left: 31%;
+}
+#flying {
+    top: 34%; 
+    left: 11%;
+}
+#ice {
+    top: 18%; 
+    left: 24%;
+}
+#dragon {
+    top: 20%; 
+    left: 48.3%;
+}
+
+@media (max-width: 850px) {
+    body {
+        flex-flow: column-reverse wrap;
+    }
+
+    p#hGym {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav#gymLeaders {
+        display: none;
+    }
+}
